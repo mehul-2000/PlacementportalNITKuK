@@ -1,0 +1,81 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flex-container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url("https://media.istockphoto.com/id/1267149438/vector/abstract-red-vector-background-with-stripes.jpg?s=612x612&w=0&k=20&c=4iykLC6veWQ4hU4D9dto5abOfvVEsULtv1eqzUFgD4Q=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 23rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-institute {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-institute > div {
+  /* margin-left: 3rem; */
+  text-align: center;
+  color: #ffffff;
+}
+.vector-art {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vector-art > img {
+  height: 14rem;
+  width: 38rem;
+}
+
+.flex-container-1 > h3 {
+  text-align: center;
+  flex: 0 1 100%;
+  margin-top: 1rem;
+}
+.flex-container-1 > div {
+  flex: 1 0 50%;
+}
+.flex-container > h3 {
+  flex: 0 1 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.flex-container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  color: #c21717;
+}
+
+.flex-container-2 > h3 {
+  text-align: center;
+  flex: 0 1 100%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.flex-container-2 > div {
+  flex: 1 0 25%;
+}
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}

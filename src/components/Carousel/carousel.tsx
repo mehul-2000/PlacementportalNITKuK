@@ -14,7 +14,6 @@ function Carousel() {
           className="carousel-caption"
           style={{
             marginBottom: "3rem",
-            marginRight: "20rem",
             color: "white",
             fontFamily: "Inter,sans-serif",
             backgroundColor: "black",
