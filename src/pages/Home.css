@@ -59,7 +59,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   padding: 0.5rem;
   margin-bottom: 1rem;
   color: #c21717;
@@ -74,6 +74,44 @@
 .flex-container-2 > div {
   flex: 1 0 25%;
 }
+
+.director-corner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 100%;
+  background-image: url("https://media.istockphoto.com/id/1267149438/vector/abstract-red-vector-background-with-stripes.jpg?s=612x612&w=0&k=20&c=4iykLC6veWQ4hU4D9dto5abOfvVEsULtv1eqzUFgD4Q=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.director-pic {
+  height: 20rem;
+  width: 18rem;
+  margin-left: 10rem;
+}
+.director-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.director-corner > h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  flex: 0 1 100%;
+  margin-top: 1rem;
+  color: white;
+}
+.message {
+  color: #ffffff;
+}
+.director-corner > div {
+  flex: 1 0 50%;
+}
+
 @media (max-width: 800px) {
   .flex-container {
     flex-direction: column;

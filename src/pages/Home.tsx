@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./Home.css";
 import Navbar from "../components/Navbar/navbar";
 import Carousel from "../components/Carousel/carousel";
+import MiniCard from "../components/MiniCard/minicard";
+
 function Home() {
   return (
     <>
@@ -53,11 +55,55 @@ function Home() {
 
       <div className="flex-container-2">
         <h3>Our Values : "Ksharamonavrat Chesta Ch"</h3>
-        <div>Hi</div>
-        <div>Hi</div>
-        <div>Hi</div>
-        <div>Hi</div>
+        <MiniCard
+          icon="People"
+          title="Alumni"
+          description="Our Alumni have emerged successful and excelled in varied professions across the globe. This network is highly enriching for the growth of our community."
+        />
+        <MiniCard
+          icon="Rankings"
+          title="Rankings"
+          description="Recognized as one of the India’s top Engineering College, we strive for excellence. Our rankings are reflective of our steep progress."
+        />
+        <MiniCard
+          icon="Edu"
+          title="Quality"
+          description="Nurturing the bright future of Nation through Quality Educational and Teaching methodologies by highly experienced faculties."
+        />
       </div>
+      <div className="director-corner">
+        <h3>Director's Corner</h3>
+        <hr />
+        <br />
+        <div className="director-section">
+          <img
+            src="https://nitkkr.ac.in/wp-content/uploads/2022/02/directorim.jpg"
+            alt="director-pic"
+            className="director-pic"
+          />
+        </div>
+        <div className="director-message">
+          <h4 className="director-title">Dr. (Prof.) BV Ramana Reddy</h4>
+          <h5 className="institute">
+            National Institute of Technology Kurukshetra
+          </h5>
+          <div className="message">
+            India, the land of seekers, is at the cusp of becoming Vishwa Guru
+            all over again after 1100 years of subjugation, wars, annexures and
+            humiliation. It is again a free country due to the sacrifices made
+            by our leaders, freedom fighters and has learnt the art of standing
+            tall in the midst of many a challenge of building the nation with
+            its rich diversity, cultures, languages all over again since the
+            last 75 years. Unity in Diversity is our mantra while making our
+            nation stronger in every sphere. I heartily welcome everyone who
+            visits the Placement Portal of this institution
+          </div>
+        </div>
+      </div>
+
+      {/* TPO Section */}
+
+      <div className="office-bearers"></div>
     </>
   );
 }
