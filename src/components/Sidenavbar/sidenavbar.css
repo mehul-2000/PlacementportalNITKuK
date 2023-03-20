@@ -1,0 +1,19 @@
+.css-1r9jet7 > .MuiButtonBase-root {
+  margin-right: 11.5rem;
+}
+
+.nav-logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+#appbar {
+  margin: 0 auto 0 auto;
+}
+
+@media (max-width: 305px) {
+  #head-text {
+    display: none;
+  }
+}
