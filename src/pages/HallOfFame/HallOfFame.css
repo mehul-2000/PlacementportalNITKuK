@@ -1,0 +1,54 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: #c1c2f7;
+}
+
+.inside{
+    width:80vw;
+    height: 85.38vh;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:40px;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.second{
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    height:4rem;
+    padding:auto;
+
+
+}
+
+.btn1{
+    margin-left: 40rem;
+}
+.btn2{
+    width:35vw;
+    border-radius: 10px;
+}
+
+.btn3{
+    width:35vw;
+    border-radius: 10px;
+    margin-left:10rem;
+}
+.alertBox{
+    margin-top:20px;
+    background-color: #f7aaa0;
+    color:black;
+    border-radius: 10px;
+}
