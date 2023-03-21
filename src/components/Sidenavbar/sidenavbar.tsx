@@ -20,6 +20,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import "./sidenavbar.css";
 import Team from "../../pages/Team/Team";
+import DeveloperCorner from "../../pages/Developer/Developer";
 import Footer from "../../components/Footer/footer";
 const drawerWidth = 240;
 
@@ -107,7 +108,14 @@ export default function MiniDrawer() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{ backgroundColor: "#C21717" }}>
+      <AppBar
+        position="fixed"
+        open={open}
+        sx={{
+          backgroundImage:
+            "linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(247, 0, 0) 91.1%);",
+        }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -196,6 +204,7 @@ export default function MiniDrawer() {
         <DrawerHeader />
         {/* <Landing /> */}
         <Team />
+        <DeveloperCorner />
         <Footer />
       </Box>
     </Box>

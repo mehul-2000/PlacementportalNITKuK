@@ -43,6 +43,7 @@ export default function CardDetails(props: any) {
           width: "50%",
           borderRadius: "50%",
           height: "11rem",
+          marginTop: "1rem",
         }}
         component="img"
         height="194"
