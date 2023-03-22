@@ -1,0 +1,38 @@
+.main_wrapper{
+    display:flex;
+    flex-direction: column;
+    background-color: #edf1f5;
+    height: 86.3vh;
+}
+
+.first{
+    display:flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.left{
+    width:50%;
+    margin-left: 2rem;
+}
+.right{
+    width:50%;
+    margin-right: 2rem;
+    display: flex; 
+    justify-content: flex-end
+}
+.second{
+    margin-top:2rem;
+    background-color: white;
+    margin-left: 2rem;
+    margin-right:2rem;
+    border-radius: 10px;
+    padding:20px;
+}
+select.form-control{display:inline-block}
+select{
+    height:2.3rem;
+    outline: none;
+    border-color: #ced4da; 
+    border-radius:0.2rem;
+}

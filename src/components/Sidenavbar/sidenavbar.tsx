@@ -21,6 +21,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import "./sidenavbar.css";
 import Team from "../../pages/Team/Team";
 import DeveloperCorner from "../../pages/Developer/Developer";
+import Announcement from "../../pages/Announcement/Announcement";
+import AddNewCompany from "../../pages/AddNewCompany/AddNewCompany";
 import Footer from "../../components/Footer/footer";
 const drawerWidth = 240;
 
@@ -203,8 +205,12 @@ export default function MiniDrawer() {
       <Box component="main" sx={{ flexGrow: 1, backgroundColor: "#EDF1F5" }}>
         <DrawerHeader />
         {/* <Landing /> */}
-        <Team />
-        <DeveloperCorner />
+        {/* <Team />
+        <DeveloperCorner />*/}
+        
+        {/* <Announcement/> */}
+        
+        <AddNewCompany/>
         <Footer />
       </Box>
     </Box>
