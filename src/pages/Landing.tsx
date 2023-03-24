@@ -5,7 +5,9 @@ function LandingPage() {
     <>
       <div className="row page-titles">
         <div className="col-md-5 align-self-center">
-          <h4 className="text-themecolor">Welcome to MNIT Placement Portal</h4>
+          <h4 className="text-themecolor">
+            Welcome to NITKKR Placement Portal
+          </h4>
         </div>
 
         {/* Placements  */}

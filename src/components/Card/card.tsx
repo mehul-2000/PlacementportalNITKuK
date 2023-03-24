@@ -1,14 +1,13 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
-
+import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
 
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -35,7 +34,7 @@ export default function CardDetails(props: any) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, border: "0.5px solid red" }}>
+    <Card sx={{ maxWidth: 345, boxShadow: "0.05rem 0.05rem" }}>
       <CardMedia
         className="card-media"
         style={{
