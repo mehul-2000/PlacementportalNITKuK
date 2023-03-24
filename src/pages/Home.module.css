@@ -1,12 +1,4 @@
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.flex-container-1 {
+.flexContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -19,43 +11,43 @@
   margin-bottom: 1rem;
 }
 
-.about-institute {
+.aboutInstitute {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.about-institute > div {
+.aboutInstitute > div {
   /* margin-left: 3rem; */
   text-align: center;
   color: #ffffff;
 }
-.vector-art {
+.vectorArt {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.vector-art > img {
+.vectorArt > img {
   height: 14rem;
   width: 38rem;
 }
 
-.flex-container-1 > h3 {
+.flexContainer > h3 {
   text-align: center;
   flex: 0 1 100%;
   margin-top: 1rem;
 }
-.flex-container-1 > div {
+.flexContainer > div {
   flex: 1 0 50%;
 }
-.flex-container > h3 {
+.flexContainer > h3 {
   flex: 0 1 100%;
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.flex-container-2 {
+.flexContainer1 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -65,17 +57,17 @@
   color: #c21717;
 }
 
-.flex-container-2 > h3 {
+.flexContainer1 > h3 {
   text-align: center;
   flex: 0 1 100%;
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
-.flex-container-2 > div {
+.flexContainer1 > div {
   flex: 1 0 25%;
 }
 
-.director-corner {
+.directorCorner {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -88,17 +80,17 @@
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
-.director-pic {
+.directorPic {
   height: 20rem;
   width: 18rem;
   margin-left: 10rem;
 }
-.director-section {
+.directorSection {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.director-corner > h3 {
+.directorCorner > h3 {
   text-align: center;
   margin-bottom: 1rem;
   flex: 0 1 100%;
@@ -108,14 +100,8 @@
 .message {
   color: #ffffff;
 }
-.director-corner > div {
+.directorCorner > div {
   flex: 1 0 50%;
-}
-
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-  }
 }
 
 .card {

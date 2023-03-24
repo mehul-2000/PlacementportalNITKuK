@@ -14,7 +14,11 @@ function AdminCard(props: any) {
             With supporting text below as a natural lead-in to additional
             content.
           </p>
-          <a href="#" className="btn btn-primary" style={{ width: "8rem" }}>
+          <a
+            href="#"
+            className="btn btn-primary"
+            style={{ width: "8rem", marginTop: "1rem" }}
+          >
             Manage Now
           </a>
         </div>

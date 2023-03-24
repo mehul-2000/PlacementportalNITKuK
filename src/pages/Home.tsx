@@ -1,9 +1,7 @@
-import React, { Component } from "react";
-import "./Home.css";
+import styles from "./Home.module.css";
 import Navbar from "../components/Navbar/navbar";
 import Carousel from "../components/Carousel/carousel";
 import MiniCard from "../components/MiniCard/minicard";
-
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -11,24 +9,21 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import Grid from "@mui/material/Grid";
 import Fab from "@mui/material/Fab";
 import NavigationIcon from "@mui/icons-material/Navigation";
-import Typography from "@mui/material/Typography";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Card from "@mui/material/Card";
 import OfficialCard from "../components/OfficialCard/official-card";
+import { useNavigate } from "react-router-dom";
 const buttons = [
   <Button key="one">Placement Stats - 2021-22</Button>,
   <Button key="two">Placement Stats - 2020-21</Button>,
   <Button key="three">Placement Stats - 2019-20</Button>,
 ];
-const content = (
-  <div>
-    {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id dignissim justo.
- Nulla ut facilisis ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus.
- Sed malesuada lobortis pretium.`}
-  </div>
-);
+
 function Home() {
+  const navigate = useNavigate();
+
+  const navigateToMainPortal = () => {
+    // 👇️ navigate to /contacts
+    navigate("/main-portal");
+  };
   return (
     <>
       <Navbar />
@@ -65,6 +60,7 @@ function Home() {
             color="primary"
             aria-label="add"
             sx={{ backgroundColor: "#C21717" }}
+            onClick={navigateToMainPortal}
           >
             <NavigationIcon sx={{ mr: 1 }} />
             NITKKR Placement Portal Link
@@ -98,9 +94,9 @@ function Home() {
 
       {/* About NIT Kurukshetra */}
 
-      <div className="flex-container-1">
+      <div className={styles.flexContainer}>
         <h3>About Us</h3>
-        <div className="about-institute">
+        <div className={styles.aboutInstitute}>
           <div>
             NIT Kurukshetra, formerly known as Regional Engineering College,
             Kurukshetra, was founded in 1963. It was conferred upon the NIT
@@ -115,7 +111,7 @@ function Home() {
             technical personnel of high quality.
           </div>
         </div>
-        <div className="vector-art">
+        <div className={styles.vectorArt}>
           <img
             src="https://img.freepik.com/free-vector/illustration-university-graduates_53876-28466.jpg?size=626&ext=jpg"
             alt="University-pic"
@@ -125,7 +121,7 @@ function Home() {
 
       {/* Values */}
 
-      <div className="flex-container-2">
+      <div className={styles.flexContainer1}>
         <h3>Our Values : "Ksharamonavrat Chesta Ch"</h3>
         <MiniCard
           icon="People"
@@ -143,15 +139,15 @@ function Home() {
           description="Nurturing the bright future of Nation through Quality Educational and Teaching methodologies by highly experienced faculties."
         />
       </div>
-      <div className="director-corner">
+      <div className={styles.directorCorner}>
         <h3>Director's Corner</h3>
         <hr />
         <br />
-        <div className="director-section">
+        <div className={styles.directorSection}>
           <img
             src="https://nitkkr.ac.in/wp-content/uploads/2022/02/directorim.jpg"
             alt="director-pic"
-            className="director-pic"
+            className={styles.directorPic}
           />
         </div>
         <div className="director-message">
@@ -159,7 +155,7 @@ function Home() {
           <h5 className="institute">
             National Institute of Technology Kurukshetra
           </h5>
-          <div className="message">
+          <div className={styles.message}>
             India, the land of seekers, is at the cusp of becoming Vishwa Guru
             all over again after 1100 years of subjugation, wars, annexures and
             humiliation. It is again a free country due to the sacrifices made
