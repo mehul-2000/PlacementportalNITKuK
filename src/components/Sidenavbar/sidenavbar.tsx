@@ -23,6 +23,7 @@ import Team from "../../pages/Team/Team";
 import DeveloperCorner from "../../pages/Developer/Developer";
 import Announcement from "../../pages/Announcement/Announcement";
 import AddNewCompany from "../../pages/AddNewCompany/AddNewCompany";
+import InterviewExperience from "../../pages/InterviewExperience/InterviewExperience";
 import Footer from "../../components/Footer/footer";
 const drawerWidth = 240;
 
@@ -210,7 +211,8 @@ export default function MiniDrawer() {
         
         {/* <Announcement/> */}
         
-        <AddNewCompany/>
+        {/* <AddNewCompany/> */}
+        <InterviewExperience/>
         <Footer />
       </Box>
     </Box>

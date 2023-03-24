@@ -3,10 +3,8 @@ import "./AddNewCompany.css";
 function AddNewCompany() {
   let [ugShow, setUgShow] = useState(false);
   let [pgShow, setPgShow] = useState(false);
-  let [mcaShow, setMcaShow] = useState(false);
   let [ugDisplay, setUgDisplay] = useState({ display: "none" });
   let [pgDisplay, setPgDisplay] = useState({ display: "none" });
-  let [mcaDisplay, setMcaDisplay] = useState({ display: "none" });
   const changeUgStyle = () => {
     if (!ugShow) {
       setUgShow(true);
@@ -24,16 +22,6 @@ function AddNewCompany() {
     } else {
       setPgShow(false);
       setPgDisplay({ display: "none" });
-    }
-  };
-
-  const changeMcaStyle = () => {
-    if (!mcaShow) {
-      setMcaShow(true);
-      setMcaDisplay({ display: "inline" });
-    } else {
-      setMcaShow(false);
-      setMcaDisplay({ display: "none" });
     }
   };
 
@@ -244,7 +232,6 @@ function AddNewCompany() {
               className="form-check-input"
               type="checkbox"
               id="mcaCheck"
-              onClick={changeMcaStyle}
               value="option3"
             />
             <label className="form-check-label" htmlFor="inlineCheckbox2">
@@ -347,7 +334,7 @@ function AddNewCompany() {
                 value="option1"
               />
               <label className="form-check-label" htmlFor="inlineCheckbox1">
-                B.Tech
+              Civil Engineering
               </label>
             </div>
             <div className="form-check form-check-inline big_checkbox">
@@ -358,7 +345,7 @@ function AddNewCompany() {
                 value="option2"
               />
               <label className="form-check-label" htmlFor="inlineCheckbox2">
-                M.Tech
+              Electrical Engineering
               </label>
             </div>
             <div className="form-check form-check-inline big_checkbox">
@@ -369,7 +356,7 @@ function AddNewCompany() {
                 value="option3"
               />
               <label className="form-check-label" htmlFor="inlineCheckbox2">
-                MCA
+              Electronics & Comm
               </label>
             </div>
             <div className="form-check form-check-inline big_checkbox">
@@ -380,7 +367,7 @@ function AddNewCompany() {
                 value="option1"
               />
               <label className="form-check-label" htmlFor="inlineCheckbox1">
-                B.Tech
+              Mechanical Engineering
               </label>
             </div>
             <div className="form-check form-check-inline big_checkbox">
@@ -391,7 +378,7 @@ function AddNewCompany() {
                 value="option2"
               />
               <label className="form-check-label" htmlFor="inlineCheckbox2">
-                M.Tech
+              Physics
               </label>
             </div>
             <div className="form-check form-check-inline big_checkbox">
@@ -402,85 +389,36 @@ function AddNewCompany() {
                 value="option3"
               />
               <label className="form-check-label" htmlFor="inlineCheckbox2">
-                MCA
+              Computer Engineering
+              </label>
+            </div>
+            <div className="form-check form-check-inline big_checkbox">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="inlineCheckbox2"
+                value="option3"
+              />
+              <label className="form-check-label" htmlFor="inlineCheckbox2">
+              School of VLSI Design & Embedded Systems
+              </label>
+            </div>
+            <div className="form-check form-check-inline big_checkbox">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="inlineCheckbox2"
+                value="option3"
+              />
+              <label className="form-check-label" htmlFor="inlineCheckbox2">
+              School of Energy and Efficiency
               </label>
             </div>
           </div>
-          <br></br>
 
-          <div className="ug" id="ug_branches" style={mcaDisplay}>
-            <label htmlFor="eligible_programs">Eligible MCA Branches</label>
-            <br></br>
-            <div className="form-check form-check-inline big_checkbox">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="inlineCheckbox1"
-                value="option1"
-              />
-              <label className="form-check-label" htmlFor="inlineCheckbox1">
-                B.Tech
-              </label>
-            </div>
-            <div className="form-check form-check-inline big_checkbox">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="inlineCheckbox2"
-                value="option2"
-              />
-              <label className="form-check-label" htmlFor="inlineCheckbox2">
-                M.Tech
-              </label>
-            </div>
-            <div className="form-check form-check-inline big_checkbox">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="inlineCheckbox2"
-                value="option3"
-              />
-              <label className="form-check-label" htmlFor="inlineCheckbox2">
-                MCA
-              </label>
-            </div>
-            <div className="form-check form-check-inline big_checkbox">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="inlineCheckbox1"
-                value="option1"
-              />
-              <label className="form-check-label" htmlFor="inlineCheckbox1">
-                B.Tech
-              </label>
-            </div>
-            <div className="form-check form-check-inline big_checkbox">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="inlineCheckbox2"
-                value="option2"
-              />
-              <label className="form-check-label" htmlFor="inlineCheckbox2">
-                M.Tech
-              </label>
-            </div>
-            <div className="form-check form-check-inline big_checkbox">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="inlineCheckbox2"
-                value="option3"
-              />
-              <label className="form-check-label" htmlFor="inlineCheckbox2">
-                MCA
-              </label>
-            </div>
-          </div>
-          <br></br>
+          
 
-          <div className="form-row">
+          <div className="form-row" style={{marginTop:"2rem"}}>
             <div className="form-group col-md-6">
               <label htmlFor="companyName">Minimum CGPA</label>
               <input
