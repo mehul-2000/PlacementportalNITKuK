@@ -1,7 +1,15 @@
 function Footer() {
   return (
     <>
-      <footer className="bg-light text-center text-lg-start">
+      <footer
+        className="bg-light text-center text-lg-start"
+        style={{
+          bottom: "0",
+          position: "relative",
+          width: "100%",
+          marginTop: "1rem",
+        }}
+      >
         {/* <!-- Copyright --> */}
         <div
           className="text-center p-3"

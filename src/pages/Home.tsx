@@ -4,6 +4,30 @@ import Navbar from "../components/Navbar/navbar";
 import Carousel from "../components/Carousel/carousel";
 import MiniCard from "../components/MiniCard/minicard";
 
+import Divider from "@mui/material/Divider";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import Grid from "@mui/material/Grid";
+import Fab from "@mui/material/Fab";
+import NavigationIcon from "@mui/icons-material/Navigation";
+import Typography from "@mui/material/Typography";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import Card from "@mui/material/Card";
+import OfficialCard from "../components/OfficialCard/official-card";
+const buttons = [
+  <Button key="one">Placement Stats - 2021-22</Button>,
+  <Button key="two">Placement Stats - 2020-21</Button>,
+  <Button key="three">Placement Stats - 2019-20</Button>,
+];
+const content = (
+  <div>
+    {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id dignissim justo.
+ Nulla ut facilisis ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+ Sed malesuada lobortis pretium.`}
+  </div>
+);
 function Home() {
   return (
     <>
@@ -11,18 +35,66 @@ function Home() {
       <Carousel />
 
       {/* Button/Links Section */}
-      <div className="flex-container">
-        <h3>Links for Redirecting to Respective Portals...</h3>
-        <button type="button" className="btn btn-danger btn-lg">
-          Placement Officer
-        </button>
-        <button type="button" className="btn btn-secondary btn-lg">
-          Student Coordinators
-        </button>
-        <button type="button" className="btn btn-danger btn-lg">
-          Students
-        </button>
-      </div>
+
+      <Grid container>
+        <Grid
+          item
+          sm={12}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h3 className="text-themecolor" style={{ marginTop: "1rem" }}>
+            Portal Section
+          </h3>
+        </Grid>
+        <Grid
+          item
+          xs
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <img src={require("./logo1.png")} alt="Logo-Institute" />
+          <Fab
+            variant="extended"
+            color="primary"
+            aria-label="add"
+            sx={{ backgroundColor: "#C21717" }}
+          >
+            <NavigationIcon sx={{ mr: 1 }} />
+            NITKKR Placement Portal Link
+          </Fab>
+        </Grid>
+        <Divider orientation="vertical" flexItem></Divider>
+        <Grid
+          item
+          xs
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+        >
+          <h3 className="text-themecolor" style={{ marginTop: "1rem" }}>
+            Placement Statistics
+          </h3>
+          <ButtonGroup
+            orientation="vertical"
+            aria-label="vertical contained button group"
+            variant="text"
+            color="error"
+            size="large"
+          >
+            {buttons}
+          </ButtonGroup>
+        </Grid>
+      </Grid>
 
       {/* About NIT Kurukshetra */}
 
@@ -102,8 +174,162 @@ function Home() {
       </div>
 
       {/* TPO Section */}
+      <h4 style={{ textAlign: "center", marginBottom: "1rem" }}>
+        Office Holders
+      </h4>
+      <Box
+        sx={{
+          marginTop: "2rem",
+          padding: "0.5rem",
+          borderRadius: "1rem",
+          backgroundColor: "#FFFFFF",
+        }}
+      >
+        <Grid container spacing={4} sx={{ padding: "1rem" }}>
+          <Grid item xs={12} sm={6} md={4}>
+            <OfficialCard />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <OfficialCard />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <OfficialCard />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <OfficialCard />
+          </Grid>
+        </Grid>
+      </Box>
 
-      <div className="office-bearers"></div>
+      {/* Footer */}
+
+      <footer className="text-center text-lg-start bg-dark text-white">
+        {/* <!-- Section: Social media --> */}
+        <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          {/* <!-- Left --> */}
+          <div className="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          {/* <!-- Left --> */}
+
+          {/* <!-- Right --> */}
+          <div>
+            <a href="" className=" link-secondary">
+              <i className="fa fa-facebook fa-lg mr-4"></i>
+            </a>
+
+            <a href="" className="link-secondary">
+              <i className="fa fa-google fa-lg mr-4"></i>
+            </a>
+
+            <a href="" className="link-secondary">
+              <i className="fa fa-linkedin fa-lg mr-4"></i>
+            </a>
+
+            <a href="" className="link-secondary">
+              <i className="fa fa-youtube fa-lg mr-4"></i>
+            </a>
+          </div>
+          {/* <!-- Right --> */}
+        </section>
+        {/* <!-- Section: Social media --> */}
+
+        {/* <!-- Section: Links  --> */}
+        <section className="">
+          <div className="container text-center text-md-start mt-5">
+            {/* <!-- Grid row --> */}
+            <div className="row mt-3">
+              {/* <!-- Grid column --> */}
+              <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                {/* <!-- Links --> */}
+                <h6 className="text-uppercase fw-bold mb-4">Useful Links</h6>
+                <p>
+                  <a href="#!" className="text-reset">
+                    Invitation
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="text-reset">
+                    Major Recruiters
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="text-reset">
+                    Build a Relationshsip
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="text-reset">
+                    Placement Protocol
+                  </a>
+                </p>
+              </div>
+              {/* <!-- Grid column --> */}
+
+              {/* <!-- Grid column --> */}
+              <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                {/* <!-- Links --> */}
+                <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
+                <p>
+                  <a href="#!" className="text-reset">
+                    General Instructions
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="text-reset">
+                    UG Internship Guidelines
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="text-reset">
+                    Reach US
+                  </a>
+                </p>
+                <p>
+                  <a href="#!" className="text-reset">
+                    FAQ
+                  </a>
+                </p>
+              </div>
+              {/* <!-- Grid column --> */}
+              {/* <!-- Grid column --> */}
+              <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                {/* <!-- Content --> */}
+                <h6 className="text-uppercase fw-bold mb-4">
+                  T & P cell, NIT Kurukshetra
+                </h6>
+                <p>
+                  The Training and Placement Cell is a nodal point of contact
+                  for companies seeking to establish a fruitful relationship
+                  with the institute.
+                </p>
+              </div>
+              {/* <!-- Grid column --> */}
+              {/* <!-- Grid column --> */}
+              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                {/* <!-- Links --> */}
+                <h6 className="text-uppercase fw-bold mb-4">Contact Us</h6>
+                <p>
+                  <i className="fa fa-home me-3 text-secondary"></i> Ground
+                  Floor, Old Administrative Building, NIT Kurukshetra, Haryana,
+                  India
+                </p>
+                <p>
+                  <i className="fa fa-envelope me-3 text-secondary"></i>
+                  tnp@nitkkr.ac.in
+                </p>
+                <p>
+                  <i className="fa fa-phone me-3 text-secondary"></i> + 01 234
+                  567 88
+                </p>
+              </div>
+              {/* <!-- Grid column --> */}
+            </div>
+            {/* <!-- Grid row --> */}
+          </div>
+        </section>
+        {/* <!-- Section: Links  --> */}
+      </footer>
     </>
   );
 }

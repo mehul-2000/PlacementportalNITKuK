@@ -16,12 +16,17 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import LoginIcon from "@mui/icons-material/Login";
+import GroupsIcon from "@mui/icons-material/Groups";
+import StarsIcon from "@mui/icons-material/Stars";
+import CodeIcon from "@mui/icons-material/Code";
+import ContactIcon from "@mui/icons-material/ConnectWithoutContact";
 import "./sidenavbar.css";
 import Team from "../../pages/Team/Team";
 import DeveloperCorner from "../../pages/Developer/Developer";
+import AdminCorner from "../../pages/Admin-Management/Admin-Management";
 import Footer from "../../components/Footer/footer";
+import Landing from "../../pages/Landing";
 const drawerWidth = 240;
 
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -151,31 +156,44 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
+          {["Login", "Team", "Hall of Fame", "Developers", "Contact Us"].map(
+            (text, index) => (
+              <ListItem key={text} disablePadding sx={{ display: "block" }}>
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
+                    minHeight: 48,
+                    justifyContent: open ? "initial" : "center",
+                    px: 2.5,
+                    color: "#413F3D",
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : "auto",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {index === 0 ? (
+                      <LoginIcon />
+                    ) : index === 1 ? (
+                      <GroupsIcon />
+                    ) : index === 2 ? (
+                      <StarsIcon />
+                    ) : index === 3 ? (
+                      <CodeIcon />
+                    ) : (
+                      <ContactIcon />
+                    )}
+                  </ListItemIcon>
+                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                </ListItemButton>
+              </ListItem>
+            )
+          )}
         </List>
         <Divider />
-        <List>
+        {/* <List>
           {["All mail", "Trash", "Spam"].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
@@ -198,13 +216,14 @@ export default function MiniDrawer() {
               </ListItemButton>
             </ListItem>
           ))}
-        </List>
+        </List> */}
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, backgroundColor: "#EDF1F5" }}>
         <DrawerHeader />
         {/* <Landing /> */}
-        <Team />
-        <DeveloperCorner />
+        {/* <Team /> */}
+        {/* <DeveloperCorner /> */}
+        <AdminCorner />
         <Footer />
       </Box>
     </Box>
