@@ -16,11 +16,11 @@ import AdminPanel from "./pages/Admin-Management/Admin-Management";
 function App() {
   return (
     <>
-    
-    <Routes>
-       <Route path="/" element={<Home/>} />
-       <Route path="/main-portal" element={<SideNavbar />} />
-    </Routes>
+    <SideNavbar/>
+    {/* <Routes> */}
+       {/* <Route path="/" element={<Home/>} /> */}
+       {/* <Route path="/main-portal" element={<SideNavbar />} /> */}
+    {/* </Routes> */}
     </>
 
 
