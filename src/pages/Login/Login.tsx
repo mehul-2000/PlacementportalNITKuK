@@ -2,11 +2,17 @@ import React from 'react';
 import Footer from '../../components/Footer/footer';
 import SideNavBar from "../../components/Sidenavbar/sidenavbar";
 import "./Login.css"
-
+import { useNavigate } from "react-router-dom";
 export default function Login() {
+  const navigate = useNavigate();
+  const navigateFunction = () => {
+    
+    navigate("/main-portal/register");
+    
+  }
   return (
     <>
-    <SideNavBar/>
+  
     <div className="login-wrapper" style={{backgroundColor:"#edf1f5",width:"100vw"}}>
     <div className="row">
       <div className="col-md-6 offset-md-3">
@@ -28,8 +34,8 @@ export default function Login() {
               <input type="password" className="form-control" id="password" placeholder="Password"/>
             </div>
             <div className="text-center"><button type="submit" className="btn btn-color px-5 mb-5 w-100">Login</button></div>
-            <div id="emailHelp" className="form-text text-center mb-5 text-dark">Not
-              Registered? <a href="/register" className="text-dark fw-bold"> Create an
+            <div id="emailHelp" className="form-text text-center mb-5 text-dark" onClick={navigateFunction}>Not
+              Registered? <a  className="text-dark fw-bold"> Create an
                 Account</a>
             </div>
           </form>
@@ -48,7 +54,6 @@ export default function Login() {
 
 
 
-<Footer/>
     </>
   )
 }

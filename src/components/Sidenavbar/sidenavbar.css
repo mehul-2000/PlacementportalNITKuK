@@ -12,6 +12,7 @@
   margin: 0 auto 0 auto;
 }
 
+
 @media (max-width: 305px) {
   #head-text {
     display: none;
