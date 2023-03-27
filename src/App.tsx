@@ -19,7 +19,7 @@ function App() {
     {/* <SideNavbar/> */}
     <Routes>
        <Route path="/" element={<Home/>} />
-      <Route path="/main-portal" element={<SideNavbar />} />
+       <Route path="/main-portal" element={<SideNavbar />} />
     </Routes>
     </>
 
