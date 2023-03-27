@@ -6,7 +6,7 @@
 
 .details{
 width:80vw;
-height: 81vh;
+height: 74.8vh;
 border-radius: 5px;
 background-size: cover;
 margin: auto;
@@ -32,7 +32,7 @@ h4{
 
 }
 
-img{
+.contact-logo{
     margin-top: 20px;
     margin-bottom: 20px;
     height: 10rem;

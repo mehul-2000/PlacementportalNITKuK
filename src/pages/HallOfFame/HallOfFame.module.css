@@ -1,14 +1,15 @@
 .main{
     display: flex;
     flex-direction: column;
-    background-color: #c1c2f7;
+    background-color: #edf1f5;
+    height:100vh;
 }
 
 .inside{
     width:80vw;
-    height: 85.38vh;
+    height: 70vh;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 3rem;
     margin-bottom: 20px;
     padding:40px;
     border-radius: 10px;
@@ -34,7 +35,10 @@
 }
 
 .btn1{
-    margin-left: 40rem;
+    margin-left: 60rem;
+    margin-top: 0;
+
+
 }
 .btn2{
     width:35vw;

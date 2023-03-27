@@ -1,13 +1,15 @@
 import Grid from "@mui/material/Grid";
 import DeveloperCard from "../../components/AboutCard/about-card";
 import Box from "@mui/material/Box";
+import SideNavbar from "../../components/Sidenavbar/sidenavbar";
 import "./Developer.css";
 function Developer() {
   return (
     <>
+    <SideNavbar/>
       <div className="developer-page-wrapper">
         <div className="col-md-5 align-self-center">
-          <h5 className="text-themecolor" style={{ marginTop: "1rem" }}>
+          <h5 className="text-themecolor" style={{ marginTop: "1rem",marginLeft:"3rem" }}>
             Developer's Corner
           </h5>
         </div>
@@ -17,6 +19,7 @@ function Developer() {
             padding: "1.5rem",
             borderRadius: "1rem",
             backgroundColor: "#FFFFFF",
+            marginLeft:"3rem"
           }}
         >
           <Grid container spacing={2}>

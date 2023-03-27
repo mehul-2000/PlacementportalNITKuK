@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import { styled, useTheme, Theme, CSSObject } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
@@ -21,6 +22,7 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import StarsIcon from "@mui/icons-material/Stars";
 import CodeIcon from "@mui/icons-material/Code";
 import ContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import{Routes,Route} from 'react-router-dom';
 import "./sidenavbar.css";
 import Team from "../../pages/Team/Team";
 import DeveloperCorner from "../../pages/Developer/Developer";
@@ -28,7 +30,9 @@ import Announcement from "../../pages/Announcement/Announcement";
 import AddNewCompany from "../../pages/AddNewCompany/AddNewCompany";
 import InterviewExperience from "../../pages/InterviewExperience/InterviewExperience";
 import AdminCorner from "../../pages/Admin-Management/Admin-Management";
-
+import Contact from '../../pages/Contact/Contact'
+import HallOfFame from "../../pages/HallOfFame/HallOfFame";
+import TeamPage from "../../pages/Team/Team";
 import Footer from "../../components/Footer/footer";
 import Landing from "../../pages/Landing";
 const drawerWidth = 240;
@@ -114,6 +118,22 @@ export default function MiniDrawer() {
     setOpen(false);
   };
 
+  const navigate = useNavigate();
+  const navigateFunction = (e:any,index:any) => {
+    if(index==0)
+    navigate("/login");
+    else if(index==1)
+    navigate("/team");
+    else if(index==2)
+    navigate("/hall-of-fame");
+    else if(index==3)
+    navigate("/developers");
+    else
+    navigate("/contact");
+  }
+  
+
+
   return (
     <React.Fragment>
       <Box sx={{ display: "flex" }}>
@@ -163,7 +183,7 @@ export default function MiniDrawer() {
           <List>
             {["Login", "Team", "Hall of Fame", "Developers", "Contact Us"].map(
               (text, index) => (
-                <ListItem key={text} disablePadding sx={{ display: "block" }}>
+                <ListItem key={text} disablePadding sx={{ display: "block" }} onClick={(e) => navigateFunction(e, index)}>
                   <ListItemButton
                     sx={{
                       minHeight: 48,
@@ -171,7 +191,10 @@ export default function MiniDrawer() {
                       px: 2.5,
                       color: "#413F3D",
                     }}
+                   
                   >
+                     
+
                     <ListItemIcon
                       sx={{
                         minWidth: 0,
@@ -195,6 +218,7 @@ export default function MiniDrawer() {
                       primary={text}
                       sx={{ opacity: open ? 1 : 0 }}
                     />
+                    
                   </ListItemButton>
                 </ListItem>
               )
@@ -231,9 +255,18 @@ export default function MiniDrawer() {
 
           {/* <Landing /> */}
           {/* <Team /> */}
-          {/* <DeveloperCorner /> */}
-          <AdminCorner />
-          <Footer />
+          <DeveloperCorner />
+          {/* <AddNewCompany/>*/}
+          {/* <Footer />  */}
+          {/* <Routes>
+       
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/hall-of-fame" element={<HallOfFame/>}/>
+        <Route path="/developers" element={<DeveloperCorner/>}/>
+        <Route path="/team" element={<TeamPage/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
+      </Routes> */}
         </Box>
       </Box>
     </React.Fragment>
