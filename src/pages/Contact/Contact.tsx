@@ -5,8 +5,8 @@ import SideNavbar from "../../components/Sidenavbar/sidenavbar";
 
 function Contact(){
     return(
-        <>
-    <SideNavbar/>
+        <React.Fragment>
+    
     <div className={styles.main}>
         <h4 style={{marginTop:"2rem"}}>Contact Details</h4>
         <div className={styles.details} style={{backgroundImage:"url('https://nitkkr.ac.in/wp-content/uploads/2022/01/24131961_285405678647849_426967072086000359_o.jpg')"}}>
@@ -38,12 +38,9 @@ function Contact(){
             
 
 
-        <div className="text-center p-3 footer" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>© 2023:
-    <a className="text-dark" target="{_blank}" href="https://nitkkr.ac.in//" style={{color:"white"}}>NIT Kurukshetra All rights reserved</a>
+      
   </div>
-
-  </div>
-        </>
+        </React.Fragment>
     );
 }
 

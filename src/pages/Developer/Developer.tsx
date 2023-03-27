@@ -3,10 +3,11 @@ import DeveloperCard from "../../components/AboutCard/about-card";
 import Box from "@mui/material/Box";
 import SideNavbar from "../../components/Sidenavbar/sidenavbar";
 import "./Developer.css";
+import React from "react";
 function Developer() {
   return (
-    <>
-    <SideNavbar/>
+    <React.Fragment>
+    
       <div className="developer-page-wrapper">
         <div className="col-md-5 align-self-center">
           <h5 className="text-themecolor" style={{ marginTop: "1rem",marginLeft:"3rem" }}>
@@ -35,7 +36,7 @@ function Developer() {
           </Grid>
         </Box>
       </div>
-    </>
+    </React.Fragment>
   );
 }
 
