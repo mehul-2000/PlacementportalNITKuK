@@ -22,7 +22,7 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import StarsIcon from "@mui/icons-material/Stars";
 import CodeIcon from "@mui/icons-material/Code";
 import ContactIcon from "@mui/icons-material/ConnectWithoutContact";
-import {Route,Routes} from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 import "./sidenavbar.css";
 import Team from "../../pages/Team/Team";
 import DeveloperCorner from "../../pages/Developer/Developer";
@@ -30,13 +30,13 @@ import Announcement from "../../pages/Announcement/Announcement";
 import AddNewCompany from "../../pages/AddNewCompany/AddNewCompany";
 import InterviewExperience from "../../pages/InterviewExperience/InterviewExperience";
 import AdminCorner from "../../pages/Admin-Management/Admin-Management";
-import Contact from '../../pages/Contact/Contact'
+import Contact from "../../pages/Contact/Contact";
 import HallOfFame from "../../pages/HallOfFame/HallOfFame";
 import TeamPage from "../../pages/Team/Team";
 import Footer from "../../components/Footer/footer";
-import Landing from "../../pages/Landing";
+import Landing from "../../pages/LandingPage/Landing";
 import Login from "../../pages/Login/Login";
-import Register from '../../pages/Register/Register'
+import Register from "../../pages/Register/Register";
 const drawerWidth = 240;
 
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -121,20 +121,13 @@ export default function MiniDrawer() {
   };
 
   const navigate = useNavigate();
-  const navigateFunction = (e:any,index:any) => {
-    if(index==0)
-    navigate("/main-portal/login");
-    else if(index==1)
-    navigate("/main-portal/team");
-    else if(index==2)
-    navigate("/main-portal/hall-of-fame");
-    else if(index==3)
-    navigate("/main-portal/developers");
-    else
-    navigate("/main-portal/contact");
-  }
-  
-
+  const navigateFunction = (e: any, index: any) => {
+    if (index == 0) navigate("/main-portal/login");
+    else if (index == 1) navigate("/main-portal/team");
+    else if (index == 2) navigate("/main-portal/hall-of-fame");
+    else if (index == 3) navigate("/main-portal/developers");
+    else navigate("/main-portal/contact");
+  };
 
   return (
     <React.Fragment>
@@ -185,7 +178,12 @@ export default function MiniDrawer() {
           <List>
             {["Login", "Team", "Hall of Fame", "Developers", "Contact Us"].map(
               (text, index) => (
-                <ListItem key={text} disablePadding sx={{ display: "block" }} onClick={(e) => navigateFunction(e, index)}>
+                <ListItem
+                  key={text}
+                  disablePadding
+                  sx={{ display: "block" }}
+                  onClick={(e) => navigateFunction(e, index)}
+                >
                   <ListItemButton
                     sx={{
                       minHeight: 48,
@@ -193,10 +191,7 @@ export default function MiniDrawer() {
                       px: 2.5,
                       color: "#413F3D",
                     }}
-                   
                   >
-                     
-
                     <ListItemIcon
                       sx={{
                         minWidth: 0,
@@ -220,7 +215,6 @@ export default function MiniDrawer() {
                       primary={text}
                       sx={{ opacity: open ? 1 : 0 }}
                     />
-                    
                   </ListItemButton>
                 </ListItem>
               )
@@ -255,15 +249,16 @@ export default function MiniDrawer() {
         <Box component="main" sx={{ flexGrow: 1, backgroundColor: "#EDF1F5" }}>
           <DrawerHeader />
           <Routes>
-              <Route path="/contact" element={<Contact/>}/>
-              <Route path="/developers" element={<DeveloperCorner/>}/>
-              <Route path="/hall-of-fame" element={<HallOfFame/>}/>
-              <Route path="/team" element={<TeamPage/>}/>
-              <Route path="/login" element={<Login/>}/>
-              <Route path="/register" element={<Register/>}/>
+            <Route path="/" element={<Landing />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/developers" element={<DeveloperCorner />} />
+            <Route path="/hall-of-fame" element={<HallOfFame />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
-          
-          <Footer/>
+
+          <Footer />
         </Box>
       </Box>
     </React.Fragment>
